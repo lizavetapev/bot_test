@@ -91,7 +91,7 @@
         <input type="text" placeholders="Phone" id="user_phone">
         <button id="order">Place an order</button>
     </form>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
     <script>
         let tg = window.Telegram.WebApp;
         let buy = document.getElementById("buy");
