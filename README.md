@@ -1,1 +1,112 @@
-this is test
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            color: var(--tg-theme-text-color);
+            background: var(--tg-theme-bg-color);
+            }
+        #main {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 70px;
+            margin: 30px auto;
+        }
+
+        p {
+            width: 70px;
+            margin: 30px auto;
+        }
+
+        button {
+                border: 0;
+                border-radius: 5px;
+                margin-top: 50px;
+                height: 60px;
+                width: 200px;
+                font-size: 20px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 500ms ease;
+                color: var(--tg-theme-button-color);
+                background: var(--tg-theme-button-text-color);
+        }
+
+        button:hover {
+            background: var(--tg-theme-secondary-bg-color)
+        }
+
+        #form {
+            display: none;
+            text-align: center;
+        }
+
+        input {
+            width: 90%; 
+            outline: none;
+            margin: 10px 5%;
+            padding: 15px 10px;
+            font-size: 14px;
+            border: 2px solid silver;
+            border-radius: 5px;
+        }
+
+        input:focus {
+            border-color: #db5d5d;
+        }
+            
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Online shop</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png">
+        <p>Something</p>
+        <button id="buy">Buy</button>
+    </div>
+    <form id="form">
+        <input type="text" placeholders="Name" id="user_name">
+        <input type="text" placeholders="Email" id="user_email">
+        <input type="text" placeholders="Phone" id="user_phone">
+        <button id="order">Place an order</button>
+    </form>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        let tg = window.Telegram.WebApp;
+        let buy = document.getElementById("buy");
+        let order = document.getElementById("order");
+
+        buy.addEventListener("click", () => {
+            document.getElementById("main").style.dusplay = "none";
+            document.getElementById("form").style.dusplay = "block";
+            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " tg.initDataUnsafe.user.last_name;
+        });
+
+        order.addEventListener("click", () => {
+            tg.close();
+        });
+    </script>
+</body>
+
+</html>
