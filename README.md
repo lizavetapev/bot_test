@@ -1,2 +1,18 @@
-# bot_test
-This is my first project
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <h1>Online shop</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png">
+        <p>Something</p>
+        <button id="buy">Buy</button>
+    </div>
+    <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
+</body>
+
+</html>
