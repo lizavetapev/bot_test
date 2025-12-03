@@ -11,6 +11,7 @@
         <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png">
         <p>Something</p>
         <button id="buy">Buy</button>
+        <button id="click">Click</button>
     </div>
     <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
 </body>
