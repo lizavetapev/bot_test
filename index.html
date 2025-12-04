@@ -86,9 +86,9 @@
         <button id="buy">Buy</button>
     </div>
     <form id="form">
-        <input type="text" placeholders="Name" id="user_name">
-        <input type="text" placeholders="Email" id="user_email">
-        <input type="text" placeholders="Phone" id="user_phone">
+        <input type="text" placeholder="Name" id="user_name">
+        <input type="text" placeholder="Email" id="user_email">
+        <input type="text" placeholder="Phone" id="user_phone">
         <div id="error"></div>
         <button id="order">Place an order</button>
     </form>
@@ -100,8 +100,8 @@
         tg.expand();
 
         buy.addEventListener("click", () => {
-            document.getElementById("main").style.dusplay = "none";
-            document.getElementById("form").style.dusplay = "block";
+            document.getElementById("main").style.display = "none";
+            document.getElementById("form").style.display = "block";
             document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
         });
 
